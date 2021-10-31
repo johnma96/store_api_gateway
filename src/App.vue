@@ -111,7 +111,7 @@
     justify-content: space-between;
     align-items: center;
     font-family:Sunday Best;
-    font-size:18px;
+    font-size:15px;
 
   }
 
