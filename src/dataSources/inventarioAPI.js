@@ -13,7 +13,7 @@ class InventarioAPI extends RESTDataSource{
         return await this.post('/product/create/', product);
     }
 
-    async ProductsByUserId(userId){
+    async productsByUserId(userId){
         return await this.get(`/product/${userId}`);
     } 
 

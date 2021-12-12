@@ -8,6 +8,7 @@ const orderTypes = gql `
         name: String!
         quantity: Int!
         total: Int!
+        date:String!
     }
 
     extend type Query{

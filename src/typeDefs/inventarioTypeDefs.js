@@ -15,19 +15,19 @@ const inventarioTypes = gql `
         amount: Int!
     }
 
-    type ProductUpdate {
+    input ProductUpdate {
         id : Int!
         amount : Int!
     }
 
     extend type Query{
-        ProductByName(name:String!):Product
+        productsByUserId(userId:String!):[Product]
     }
 
     extend type Mutation{
-        createProduct(product:ProductInput!):Product
-        updateProduct(product:ProductUpdate!):Product
-        deleteProduct(id:Id!):
+        createProduct(productName:ProductInput!):Product
+        updateProduct(userId:String!, productId:ProductUpdate!):Product
+        deleteProduct(userId:String!, productId:String!):null!
     }
 
 

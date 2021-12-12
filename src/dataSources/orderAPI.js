@@ -11,11 +11,11 @@ class OrderAPI extends RESTDataSource{
 
     async createOrder(order){
         order = new Object(JSON.parse(JSON.stringify(order)));
-        return await this.post('/order', order)
+        return await this.post('/orders', order)
     } 
 
-    async OrderByUsername(username){
-        return await this.get(`/order/${username}`)
+    async orderByUsername(username){
+        return await this.get(`/orders/${username}`)
     }
 
 }
