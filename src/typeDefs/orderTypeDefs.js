@@ -3,11 +3,11 @@ const { gql } = require('apollo-server')
 const orderTypes = gql `
 
     type Order {
-        id: String!
-        username: String!
-        name: String!
-        quantity: Int!
-        total: Int!
+        id:String!
+        username:String!
+        name:String!
+        quantity:Int!
+        total:Int!
         date:String!
     }
 

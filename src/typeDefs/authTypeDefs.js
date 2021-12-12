@@ -10,12 +10,16 @@ const authTypes = gql `
         access:String!
     }
 
-    type CredentialsInput {
+    input Refresh {
+        refresh:String!
+    }
+
+    input CredentialsInput {
         username:String!
         password:String!
     }
 
-    type SignUpInput {
+    input SignUpInput {
         username:String!
         password:String!
         name:String!
@@ -34,8 +38,8 @@ const authTypes = gql `
     }
 
     type Mutation{
-        signUpUser(userInput:$SignUpInput):Tokens!
-        logIn(credentials:$CredentialsInput!):Tokens!
+        signUpUser(userInput:SignUpInput):Tokens!
+        logIn(credentials:CredentialsInput!):Tokens!
         refreshToken(token:String!):Access!
     }
 `;

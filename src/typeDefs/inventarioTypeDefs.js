@@ -4,20 +4,20 @@ const inventarioTypes = gql `
 
     type Product{
         id:Int!
-        name: String!
-        price: Int!
-        amount: Int!
+        name:String!
+        price:Int!
+        amount:Int!
     }
     
-    type ProductInput{
-        name: String!
-        price: Int!
-        amount: Int!
+    input ProductInput{
+        name:String!
+        price:Int!
+        amount:Int!
     }
 
     input ProductUpdate {
-        id : Int!
-        amount : Int!
+        id:Int!
+        amount:Int!
     }
 
     extend type Query{
@@ -26,12 +26,9 @@ const inventarioTypes = gql `
 
     extend type Mutation{
         createProduct(productName:ProductInput!):Product
-        updateProduct(userId:String!, productId:ProductUpdate!):Product
-        deleteProduct(userId:String!, productId:String!):null!
+        updateProduct(userId:String!,productId:ProductUpdate!):Product
+        deleteProduct(userId:String!,productId:String!):String
     }
-
-
-
 `;
 
 module.exports = inventarioTypes;
