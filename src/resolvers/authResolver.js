@@ -22,11 +22,11 @@ const userResolver = {
             return await dataSources.authAPI.createUser(authInput);
         },
         logIn: (_, {credentials}, {dataSources}) =>{
-            dataSources.authAPI.authRequest(credentials);
+            return dataSources.authAPI.authRequest(credentials);
         },
-        refreshToken :(_, {token}, {dataSources}) =>
-            dataSources.authAPI.refreshToken(token)    
-        , 
+        refreshToken :(_, {token}, {dataSources}) =>{
+            return dataSources.authAPI.refreshTokenapi(token)    
+        }, 
     }
 };
 

@@ -15,6 +15,17 @@ const orderTypes = gql `
         orderByUsername(username:String!):[Order]
     }
 
+    input OrderInput{
+        username:String!
+        name:String!
+        quantity:Int!
+        total:Int!
+    }
+
+    extend type Mutation{
+        createOrder(order:OrderInput!):Order
+    }
+
 `;
 
 module.exports = orderTypes;

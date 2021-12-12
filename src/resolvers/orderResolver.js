@@ -11,6 +11,9 @@ const orderResolver = {
         }
     },
     Mutation: {
+        createOrder: async(_, {order},{dataSources}) => {
+            return dataSources.orderAPI.sendOrder(order)
+        }
         
     }
 

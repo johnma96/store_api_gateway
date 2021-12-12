@@ -1,16 +1,16 @@
 {
-    "name" : "Store_APIGateway",
-    "version" : "1.0.0",
+    "name": "Store_APIGateway",
+    "version": "1.0.0",
     "description": "API Gateway para gestionar ventas e inventario de una tienda",
     "main": "src/index",
     "scripts": {},
     "author": "Grupo 6 Mision tic",
     "license": "ISC",
     "dependencies": {
-        "apollo-datasource-rest" : "^3.1.1",
-        "apollo-server"          : "^3.1.2",
-        "graphql"                : "^15.5.1",
-        "lodash"                 : "^4.17.21",
-        "node-fetch"             :"^2.6.1"
+        "apollo-datasource-rest": "^3.1.1",
+        "apollo-server": "^3.1.2",
+        "graphql": "^15.5.1",
+        "lodash": "^4.17.21",
+        "node-fetch": "^2.6.1"
     }
 }

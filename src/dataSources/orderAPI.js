@@ -9,7 +9,7 @@ class OrderAPI extends RESTDataSource{
 
     }
 
-    async createOrder(order){
+    async sendOrder(order){
         order = new Object(JSON.parse(JSON.stringify(order)));
         return await this.post('/orders', order)
     } 
