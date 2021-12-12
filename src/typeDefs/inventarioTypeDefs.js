@@ -21,7 +21,7 @@ const inventarioTypes = gql `
     }
 
     extend type Query{
-        ProductById(id:Int!):Product
+        ProductByName(name:String!):Product
     }
 
     extend type Mutation{
