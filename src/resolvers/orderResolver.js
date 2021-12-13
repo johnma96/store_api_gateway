@@ -2,12 +2,9 @@
 
 const orderResolver = {
     Query: {
-        orderByUsername: async (_, {username}, {dataSources, userIdToken}) => {
-            usernameToken = (await dataSources.AuthAPI.getUser(userIdToken).username)
-            if(username == usernameToken)
-                return await dataSources.orderAPI.orderByUsername(username);
-            else
-                return null;
+        orderByUsername: async (_, {username}, {dataSources}) => {
+            return await dataSources.orderAPI.orderByUsername(username);
+            
         }
     },
     Mutation: {

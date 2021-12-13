@@ -12,9 +12,10 @@ const authentication = async( {req} ) => {
             let requestOptions = {
                 method  : 'POST',
                 headers : {"Content-type": "application/json"},
-                body    : JSON.stringify( {token} ),
+                body    : JSON.stringify( {"token":token} ),
                 redict  : 'follow'
             };
+            
 
             let response = await fetch (
                 `${serverConfig.auth_api_url}/verifyToken/`,

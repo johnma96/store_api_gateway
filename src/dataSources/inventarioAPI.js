@@ -10,6 +10,8 @@ class InventarioAPI extends RESTDataSource{
 
     async createProduct(product){
         product = new Object(JSON.parse(JSON.stringify(product)));
+        const prod = {}
+        prod.product_data = product
         return await this.post('/product/create/', product);
     }
 
